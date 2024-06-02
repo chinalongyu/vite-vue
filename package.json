@@ -1,0 +1,43 @@
+{
+  "name": "@icgk-ui/workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter @icgk-ui/playground dev",
+    "story": "pnpm --filter @icgk-ui/playground storybook",
+    "docs:dev": "pnpm --filter @icgk-ui/docs dev",
+    "docs:build": "pnpm build && pnpm --filter @icgk-ui/docs build",
+    "test": "cross-env NODE_ENV=test pnpm --filter @icgk-ui/components test",
+    "build": "cross-env NODE_ENV=production pnpm --filter icgk-ui build",
+    "build:dev": "cross-env NODE_ENV=development pnpm --filter icgk-ui build:watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash-es": "4.17.12",
+    "@types/node": "^20.13.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/tsconfig": "^0.5.1",
+    "node": "^20.14.0",
+    "postcss-color-mix": "^1.1.0",
+    "postcss-each": "^1.1.0",
+    "postcss-each-variables": "^0.3.0",
+    "postcss-for": "^2.1.1",
+    "postcss-nested": "^6.0.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vitest": "^1.4.0",
+    "vue-tsc": "^1.8.27"
+  },
+  "dependencies": {
+    "@icgk-ui/components": "workspace:*",
+    "@icgk-ui/hooks": "workspace:*",
+    "@icgk-ui/theme": "workspace:*",
+    "@icgk-ui/utils": "workspace:*",
+    "icgk-ui": "workspace:*",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.4.21"
+  }
+}
